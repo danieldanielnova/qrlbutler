@@ -68,20 +68,14 @@ Simply download directly from website; Install appropriate .exe files
  (Don't worry about error with sodium@3.0.2 preinstall error --- not linked to effecting bot)
 
 
-
-
-
-
-
-
-
-
 ### 5. Start your server
 
 Be sure to include  your environment!
 
 ```
 node main.js production
+
+```
 
 (Windows CMD) node core/main.js production
 ```

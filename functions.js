@@ -2,6 +2,8 @@ const download = require('./core/node_modules/download');
 const fs = require('fs');
 var config = require('./env.json')[process.argv[2]];
 const cgref_channel = config['cgref_channel'];
+const otc_channel = config['otc_channel'];
+const nominations_channel = config['nominations_channel'];
 
 fs.exists('data', function (exists) {
     if (!exists) {
@@ -12,7 +14,7 @@ fs.exists('data', function (exists) {
 
 var cgref = {
     module: 'screenshot',
-    channel = cgref_channel,
+    channel : cgref_channel,
     preload: function () {
         var url = 'https://api.coingecko.com/api/v3/coins/list';
         download(url).then((data) => {
@@ -80,7 +82,7 @@ module.exports = {
     price: cgref,
     cmc: {
         module: 'screenshot',
-        channel = config['cgref_channel'],
+        channel : cgref_channel,
         preload: function () {
             var url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=1500&convert=USD&CMC_PRO_API_KEY=' + config.cmcapi
 
@@ -140,11 +142,11 @@ module.exports = {
     },
     otc: {
         module: 'otc',
-        channel = config['otc_channel']
+        channel : otc_channel,
     },
     nominate: {
         module: 'nominations',
-        channel = config['nominations_channel']
+        channel : nominations_channel,
     }
 }
 }
