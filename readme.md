@@ -30,7 +30,8 @@ git clone https://github.com/jackalyst/qrlbutler.git
 
 ## 3. Setup your environment
 
-Rename `env.example.json` to `env.json` and fill in the details
+Rename `env.example.json` to `env.json` and fill in the details 
+(Windows: cmcapi field is key for coin market cap but currently doesn't work)
 
 ## 4. Install requirements
 
@@ -52,6 +53,28 @@ Cd into core and install all node modules
 cd core/
 npm install
 ``` 
+### Windows 10 Install 
+added by danieldanielnova (bluehills)
+
+https://nodejs.org/en/download/
+Simply download directly from website; Install appropriate .exe files
+
+ ```
+ cd core
+ npm i puppeteer
+ npm install
+ cd ..
+ 
+ (Don't worry about error with sodium@3.0.2 preinstall error --- not linked to effecting bot)
+
+
+
+
+
+
+
+
+
 
 ### 5. Start your server
 
@@ -59,6 +82,8 @@ Be sure to include  your environment!
 
 ```
 node main.js production
+
+(Windows CMD) node core/main.js production
 ```
 
 
