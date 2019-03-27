@@ -33,6 +33,9 @@ git clone https://github.com/jackalyst/qrlbutler.git
 Rename `env.example.json` to `env.json` and fill in the details 
 (Windows: cmcapi field is key for coin market cap but currently doesn't work)
 
+token_symbol is variable at beggining of (main.js& otc.js)
+admin_id is the user id of the discord server, or whomever you want to add admin rights for deleting anything within the array.
+
 ## 4. Install requirements
 
 Get on the latest version of node (v8+) and any dependencies required for puppeteer.
@@ -71,6 +74,8 @@ Simply download directly from website; Install appropriate .exe files
 ### 5. Start your server
 
 Be sure to include  your environment!
+(Windows) run:
+node core/main.js production
 
 ```
 node main.js production
