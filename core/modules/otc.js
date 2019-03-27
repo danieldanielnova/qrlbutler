@@ -1,6 +1,7 @@
 const jdb = require('node-json-db');
 const db = new jdb("otc", true, true);
 var orderid = 0;
+
 const token_symbol = "vbk";
 const admin_id = "389208423335460874"
 
@@ -179,7 +180,7 @@ module.exports = {
             return;
         }
         if (token <= 1) {
-            message.channel.send("Can't sell less than 1 ", token_symbol, " at a time");
+            message.channel.send("Can't sell less than 1 "+ token_symbol +" at a time");
             return;
         }
         var total = btc * token;
