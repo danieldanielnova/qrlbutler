@@ -52,10 +52,10 @@ console.log("Commands are: "+commands);
 client.on('ready', () => {
     console.log("Ready to serve");
 
-    modprice.setprice(client,'btc-qrl');    
+    modprice.setprice(client,'btc-'+ token_symbol);    
 
-    setInterval(function() {
-        modprice.setprice(client,'btc-qrl');    
+    setInterval(function () {
+        modprice.setprice(client, 'btc-' + token_symbol);    
     }, 180 * 1000);
 });
 

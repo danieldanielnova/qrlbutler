@@ -343,7 +343,7 @@ module.exports = {
             var output_arr = [];
             if (wts.length > 0) {
 
-                output += "Market WTS (want to sell)```";
+                output += "Market WTS (want to sell)``` ";
                 wts_sorted.forEach(function (arr) {
                     token = parseFloat(arr['token']);
                     btc = parseFloat(arr['btc']);
@@ -360,7 +360,7 @@ module.exports = {
                 });
 
                 output += output_arr.slice(Math.max(output_arr.length - 10, 1)).join('');
-                output += "```";
+                output += " ```";
             }
         } catch (error) {
 
@@ -372,7 +372,7 @@ module.exports = {
             var output_arr = [];
 
             if (wtb.length > 0) {
-                output += "Market WTB (want to buy)```";
+                output += "Market WTB (want to buy)``` ";
                 wtb_sorted.forEach(function (arr) {
                     token = parseFloat(arr.token);
                     btc = parseFloat(arr.btc);
@@ -388,7 +388,7 @@ module.exports = {
                     output_in = '';
                 });
                 output += output_arr.slice(0, 10).join('');
-                output += "```";
+                output += " ```";
                 output += "* OTC orders are removed automatically after 14 days\n";
                 output += "* Up to 10 orders are shown on either side.\n";
                 output += "* If someone is non-responsive for 3 days for trading, flag bluehills to remove the order.";
